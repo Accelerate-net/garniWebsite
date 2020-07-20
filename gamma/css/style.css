@@ -1,3 +1,14 @@
+
+@font-face {font-family: "Bayshore";
+    src: url("https://db.onlinewebfonts.com/t/bd1f28c07b5011d83f845a216c19bc6b.eot"); /* IE9*/
+    src: url("https://db.onlinewebfonts.com/t/bd1f28c07b5011d83f845a216c19bc6b.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("https://db.onlinewebfonts.com/t/bd1f28c07b5011d83f845a216c19bc6b.woff2") format("woff2"), /* chrome firefox */
+    url("https://db.onlinewebfonts.com/t/bd1f28c07b5011d83f845a216c19bc6b.woff") format("woff"), /* chrome firefox */
+    url("https://db.onlinewebfonts.com/t/bd1f28c07b5011d83f845a216c19bc6b.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
+    url("https://db.onlinewebfonts.com/t/bd1f28c07b5011d83f845a216c19bc6b.svg#Bayshore") format("svg"); /* iOS 4.1- */
+}
+
+
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,200,300,300i,400,400i,500,700,900|Satisfy&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,700,900|Satisfy&display=swap");
 /* @import url("//db.onlinewebfonts.com/c/bd1f28c07b5011d83f845a216c19bc6b?family=Bayshore"); */
