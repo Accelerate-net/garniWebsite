@@ -266,34 +266,77 @@ gsap.to(".spicesExtra3", {
   }
 });
 
-// const sprinklePath = {
-//   curviness: 1.25,
-//   autoRotate: false,
-//   values: [{
-//     x: 0,
-//     y: 80
-//   }]
-// };
+gsap.to(".topRight", {
+  duration: 1,
+  ease: "Power1.easeInOut",
+  motionPath: {
+    path: [{
+      x: 400,
+      y: 0
+    }, {
+      x: 0,
+      y: 0
+    }, {
+      x: 0,
+      y: 0
+    }],
+  },
+  scrollTrigger: {
+    trigger: ".bgImg",
+    markers: false
+  }
+});
 
-// const tween = new TimelineLite();
+gsap.to(".topRight", {
+  duration: 2,
+  ease: "Power1.easeInOut",
+  rotation: 30,
+  scrollTrigger: {
+    trigger: ".bgImg",
+    scrub: 1,
+    markers: false
+  }
+});
 
-// tween.add(
-//   TweenLite.to(".spices-sprinkle", 1, {
-//     bezier: sprinklePath,
-//     ease: Power1.easeInOut
-//   })
-// );
+gsap.to(".bottomLeft", {
+  duration: 1,
+  ease: "Power1.easeInOut",
+  motionPath: [{
+    x: -400,
+    y: 0
+  }, {
+    x: 0,
+    y: 0
+  }, {
+    x: 0,
+    y: 0
+  }],
+  scrollTrigger: {
+    trigger: ".bottomLeft",
+    markers: false
+  }
+});
 
-// const controller = new ScrollMagic.Controller();
+gsap.to(".bottomLeft", {
+  duration: 2,
+  ease: "Power1.easeInOut",
+  rotation: 10,
+  scrollTrigger: {
+    trigger: ".bottomLeft",
+    scrub: 1,
+    markers: false
+  }
+});
 
-// const scene = new ScrollMagic.Scene({
-//     triggerElement: '.bgImg',
-//     duration: 3000,
-//     triggerHook: 0,
-//     scrub: true
-//   })
+var tl = gsap.timeline();
 
-//   .setTween(tween)
-//   .addIndicators()
-//   .setPin(".spices-sprinkle")
-//   .addTo(controller);
+tl.fromTo('.logo-back', {
+  opacity: 0
+}, {
+  duration: 4,
+  opacity: 0.7,
+  scrollTrigger: {
+    trigger: ".logo-back",
+    markers: false
+  }
+}, );
