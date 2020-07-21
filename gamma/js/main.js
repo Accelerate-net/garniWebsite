@@ -331,12 +331,15 @@ gsap.to(".bottomLeft", {
 var tl = gsap.timeline();
 
 tl.fromTo('.logo-back', {
-  opacity: 0
+  opacity: 0.2
 }, {
   duration: 4,
   opacity: 0.7,
   scrollTrigger: {
     trigger: ".logo-back",
+    scrub: 1,
     markers: false
   }
 }, );
+
+tl.reverse(0, true);
