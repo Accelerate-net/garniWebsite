@@ -568,7 +568,7 @@ header {
 
 /* Banner */
 #carouselExampleIndicators {
-    margin-top: 30px;
+    margin-top: 0;
 }
 
 .carousel-inner {
