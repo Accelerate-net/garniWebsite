@@ -594,6 +594,7 @@ header {
     border-radius: 12px;
     /* position: relative; */
     margin-bottom: 4rem;
+    border: none;
 }
 
 .dummyContainer{
