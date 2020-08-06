@@ -597,7 +597,7 @@ header {
     border: none;
 }
 
-.dummyContainer{
+.dummyContainer {
     background: red;
     height: 10px;
 }
@@ -720,7 +720,7 @@ footer {
     font-weight: 600;
     text-transform: uppercase;
     color: #fff;
-    font-family: 'roboto';
+    /* font-family: 'roboto'; */
 }
 
 .footer-box .content {

@@ -824,71 +824,6 @@ xkeyframes
 /* End about */
 
 /* Full BG */
-/* .full-bg {
-  background-image: url(../imgs/background-spices.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  overflow: hidden;
-  width: 100%;
-}
-
-.fullbg-hand-wrapper {
-  position: absolute;
-  width: 100%;
-  display: flex;
-}
-
-.fullbg-hand {
-  position: absolute;
-  top: 0px;
-  left: 35%;
-  transform: translate(-50%);
-  z-index: 30;
-}
-
-.fullbg-sprinkle {
-  position: absolute;
-  top: 200px;
-  left: 35%;
-  transform: translate(-50%);
-  z-index: 20;
-}
-
-.fullbg-title {
-  width: 100%;
-  z-index: -2;
-  position: relative;
-  opacity: 0.7;
-  z-index: 10;
-}
-
-.fullbg-title img {
-  position: absolute;
-  width: 100%;
-  top: 350px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.fullbg-desc {
-  position: relative;
-  text-align: center;
-  top: 550px;
-  width: 80%;
-  margin: 0 auto;
-}
-
-.fullbg-desc p {
-  position: relative;
-  top: 50%;
-  color: #fff;
-  font-size: 1.25rem;
-  line-height: 2rem;
-  z-index: 50;
-} */
-
 .mainWrapper {
   position: relative;
   margin: 10rem 0;
@@ -1135,7 +1070,7 @@ footer {
   font-weight: 600;
   text-transform: uppercase;
   color: #fff;
-  font-family: 'Roboto';
+  /* font-family: 'Roboto'; */
 }
 
 .footer-box .content {
