@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garni Track Page</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/track.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="imgs/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon/favicon-16x16.png">
+    <link rel="manifest" href="imgs/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Poppins:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link href="//db.onlinewebfonts.com/c/bd1f28c07b5011d83f845a216c19bc6b?family=Bayshore" rel="stylesheet"
+        type="text/css" />
+    <script src="https://kit.fontawesome.com/fe06f24a1a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <nav>
+        <div class="menu-icon">
+            <span class="fas fa-bars"></span>
+        </div>
+        <div class="logo">
+            <img src="imgs/logo/logo11.png" alt="">
+        </div>
+        <div class="nav-items">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">SHOP</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </div>
+        <div class="search-icon">
+            <span class="fas fa-search"></span>
+        </div>
+        <div class="cancel-icon">
+            <span class="fas fa-times"></span>
+        </div>
+        <form action="#">
+            <input type="search" class="search-data" placeholder="Enter Tracking Id" required>
+            <button type="submit" class="fas fa-search"></button>
+        </form>
+    </nav>
+
+    <div class="orderList">
+        <div class="container panel">
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Order Number</th>
+                        <th scope="col">Order Date</th>
+                        <th scope="col">Order Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="row" data-label="#">1</td>
+                        <td data-label="Order Number"><a href="orderdetails.html">FMPP0511316239</a></td>
+                        <td data-label="Order Date">01/12/20</td>
+                        <td data-label="Order Status">Out for Delivery</td>
+                    </tr>
+                    <tr>
+                        <td scope="row" data-label="#">2</td>
+                        <td data-label="Order Number"><a href="orderdetails.html">FMPP0511316239</a></td>
+                        <td data-label="Order Date">01/12/20</td>
+                        <td data-label="Order Status">Order Confirmed</td>
+                    </tr>
+                    <tr>
+                        <td scope="row" data-label="#">3</td>
+                        <td data-label="Order Number"><a href="orderdetails.html">FMPP0511316239</a></td>
+                        <td data-label="Order Date">01/12/20</td>
+                        <td data-label="Order Status">On it's way</td>
+                    </tr>
+                    <tr>
+                        <td scope="row" data-label="#">4</td>
+                        <td data-label="Order Number"><a href="orderdetails.html">FMPP0511316239</a></td>
+                        <td data-label="Order Date">01/12/20</td>
+                        <td data-label="Order Status">Out for Delivery</td>
+                    </tr>
+                    <tr>
+                        <td scope="row" data-label="#">5</td>
+                        <td data-label="Order Number"><a href="orderdetails.html">FMPP0511316239</a></td>
+                        <td data-label="Order Date">01/12/20</td>
+                        <td data-label="Order Status">Delivered</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        const menuBtn = document.querySelector(".menu-icon span");
+        const searchBtn = document.querySelector(".search-icon");
+        const cancelBtn = document.querySelector(".cancel-icon");
+        const items = document.querySelector(".nav-items");
+        const form = document.querySelector("form");
+        menuBtn.onclick = () => {
+            items.classList.add("active");
+            menuBtn.classList.add("hide");
+            searchBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+        }
+        cancelBtn.onclick = () => {
+            items.classList.remove("active");
+            menuBtn.classList.remove("hide");
+            searchBtn.classList.remove("hide");
+            cancelBtn.classList.remove("show");
+            form.classList.remove("active");
+            cancelBtn.style.color = "#ff3d00";
+        }
+        searchBtn.onclick = () => {
+            form.classList.add("active");
+            searchBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+        }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
