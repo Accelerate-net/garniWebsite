@@ -31,58 +31,123 @@
 </head>
 
 <body>
-    <header>
-        <div id="logo"><a href=""><img src="imgs/logo/logo11.png" alt="Homepage"></a></div>
-
-        <div id="cd-hamburger-menu"><a class="cd-img-replace" href="#0"></a></div>
-        <div id="cd-cart-trigger"><a class="cd-img-replace" href="#0"></a></div>
-    </header>
-
-    <nav id="main-nav">
-        <div class="nav-links">
-            <ul>
-                <li><a href="index.html">SHOP NOW</a></li>
-                <li><a href="world-of-garni.html">HOUSE OF GARNI</a></li>
-                <li><a href="#">SHOW WALL</a></li>
-                <li><a href="#">CAREERS</a></li>
-                <li><a href="#footer">CONTACT</a></li>
-            </ul>
+    <nav>
+        <div class="menu-icon">
+            <span class="fas fa-bars"></span>
+        </div>
+        <div class="logo">
+            <img src="imgs/logo/logo11.png" alt="">
+        </div>
+        <div class="nav-items">
+            <li><a href="#">SHOP NOW</a></li>
+            <li><a href="#">HOUSE OF GARNI</a></li>
+            <li><a href="#">SHOW WALL</a></li>
+            <li><a href="#">CAREERS</a></li>
+            <li><a href="#footer">CONTACT</a></li>
+        </div>
+        <div class="shop-icon">
+            <span class="fas fa-shopping-cart"></span>
+        </div>
+        <div class="cancel-icon">
+            <span class="fas fa-times"></span>
         </div>
     </nav>
 
-    <div id="cd-shadow-layer"></div>
+    <div class="aod_left_panel_fly"></div>
 
-    <div id="cd-cart">
-        <a href="#0" class="cd-cart-close">Close<i class="fas fa-times"></i></a>
-        <h2>Cart</h2>
-        <ul class="cd-cart-items">
-            <li>
-                <span class="cd-qty">1x</span> Product Name
-                <div class="cd-price">$9.99</div>
-                <a href="#0" class="cd-item-remove cd-img-replace">Remove</a>
-            </li>
-
-            <li>
-                <span class="cd-qty">2x</span> Product Name
-                <div class="cd-price">$19.98</div>
-                <a href="#0" class="cd-item-remove cd-img-replace">Remove</a>
-            </li>
-
-            <li>
-                <span class="cd-qty">1x</span> Product Name
-                <div class="cd-price">$9.99</div>
-                <a href="#0" class="cd-item-remove cd-img-replace">Remove</a>
-            </li>
-        </ul> <!-- cd-cart-items -->
-
-        <div class="cd-cart-total">
-            <p>Total <span>$39.96</span></p>
-        </div> <!-- cd-cart-total -->
-        <div class="ch-btn">
-            <a href="#0" class="checkout-btn">Checkout</a>
+    <div class="aod_flying_cart aod-fluying-cart-hidden" id="aod_flying_cart" style="background:#FFFFFF;">
+        <span class="aod_close_cart" style="float: right;cursor:pointer;">
+            <svg height="6.82666in"
+                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                viewBox="0 0 6.82666 6.82666" width="6.82666in" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs></defs>
+                <g id="Layer_x0020_1">
+                    <path class="fil0"
+                        d="M5.91083 1.2175c0.0833031,-0.0833031 0.0833031,-0.218366 0,-0.301669 -0.0833031,-0.0833031 -0.218366,-0.0833031 -0.301669,0l-4.69334 4.69333c-0.0833031,0.0833031 -0.0833031,0.218366 0,0.301669 0.0833031,0.0833031 0.218366,0.0833031 0.301669,0l4.69334 -4.69333z">
+                    </path>
+                    <path class="fil0"
+                        d="M1.2175 0.915827c-0.0833031,-0.0833031 -0.218366,-0.0833031 -0.301669,0 -0.0833031,0.0833031 -0.0833031,0.218366 0,0.301669l4.69334 4.69333c0.0833031,0.0833031 0.218366,0.0833031 0.301669,0 0.0833031,-0.0833031 0.0833031,-0.218366 0,-0.301669l-4.69334 -4.69333z">
+                    </path>
+                </g>
+            </svg>
+        </span>
+        <h2 class="aod-main-heading" style="color:#000000;">
+            <span style="position:relative;">
+                <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1"
+                    viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g transform="translate(0 288)">
+                        <path
+                            d="M30-287.999h-4c-0.967,0-1.795,0.691-1.967,1.643l-0.43,2.357H2c-0.693,0-1.337,0.359-1.701,0.949   c-0.364,0.59-0.397,1.324-0.088,1.945l6,12C6.55-268.427,7.242-268,8-268h12.694l-0.363,2H10c-1.104,0-2,0.896-2,2   c0,1.105,0.896,2,2,2h12c0.967,0,1.795-0.691,1.967-1.643l3.703-20.358H30c1.104,0,2-0.895,2-2c0-1.105-0.896-2-2-2V-287.999z    M9.237-271.999l-4-8h17.641l-1.455,8H9.237z">
+                        </path>
+                        <path
+                            d="M12-259.999c-1.104,0-2,0.896-2,2c0,1.105,0.896,2,2,2s2-0.895,2-2C14-259.104,13.104-259.999,12-259.999z">
+                        </path>
+                        <path
+                            d="M20-259.999c-1.104,0-2,0.896-2,2c0,1.105,0.896,2,2,2c1.105,0,2-0.895,2-2C22-259.104,21.105-259.999,20-259.999z">
+                        </path>
+                    </g>
+                </svg>
+            </span>
+            YOUR CART
+        </h2>
+        <hr>
+        <span class="aod-custom-cart-message"></span>
+        <div class="aod-product-row aod-empty-cart" style="color:#000000;">Your cart is empty!</div>
+        <a class="aod-shop-button-empty" href="#" style="color:#db251c;">Shop Now!</a>
+        <div class="aod-cart-total-panel" style="background:#FFFFFF;">
+            <form action="" method="post" novalidate="" class="aod_cart_form">
+                <div class="aod-total-price">
+                    <span class="aod-total-text" style="color:#000000;">CART VALUE</span>
+                    <span class="aod-total-amount money conversion-bear-money" style="color:#000000;">
+                        <span class="aod_currency">Rs.</span>0
+                    </span>
+                </div>
+                <input type="submit" name="checkout" class="aod-fast-checkout" value="Secure Checkout"
+                    style="background: #db251c;color:#FFFFFF; border:1px solid #db251c;">
+            </form>
         </div>
-    </div> <!-- cd-cart -->
-    <!-- Navbar ends -->
+    </div>
+
+    <script>
+        const menuBtn = document.querySelector(".menu-icon span");
+        const shopBtn = document.querySelector(".shop-icon");
+        const cancelBtn = document.querySelector(".cancel-icon");
+        const items = document.querySelector(".nav-items");
+        const slidein = document.querySelector(".aod_flying_cart");
+        const closeCart = document.querySelector(".aod_close_cart");
+        const touchClose = document.querySelector(".aod_left_panel_fly");
+        menuBtn.onclick = () => {
+            items.classList.add("active");
+            menuBtn.classList.add("hide");
+            shopBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+        }
+        cancelBtn.onclick = () => {
+            items.classList.remove("active");
+            menuBtn.classList.remove("hide");
+            shopBtn.classList.remove("hide");
+            cancelBtn.classList.remove("show");
+            cancelBtn.style.color = "#ff3d00";
+        }
+        shopBtn.onclick = () => {
+            touchClose.classList.add("overlay_active_aod");
+            slidein.classList.add("aod-fluying-cart-visible");
+        }
+
+        closeCart.onclick = () => {
+            touchClose.classList.remove("overlay_active_aod");
+            slidein.classList.remove("aod-fluying-cart-visible");
+        }
+
+        touchClose.onclick = () => {
+            touchClose.classList.remove("overlay_active_aod");
+            slidein.classList.remove("aod-fluying-cart-visible");
+        }
+    </script>
+
+
 
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -500,15 +565,17 @@
 
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/5f294bda2da87279037e4583/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
+    var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"),
+            s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/5f294bda2da87279037e4583/default';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
 </script>
 <!--End of Tawk.to Script-->
 
