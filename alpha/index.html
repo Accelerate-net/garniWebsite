@@ -47,16 +47,17 @@
         </div>
         <div class="shop-icon">
             <span class="fas fa-shopping-cart"></span>
+            <span class="itemBadge" id="itemCount"> 2 </span>
         </div>
         <div class="cancel-icon">
             <span class="fas fa-times"></span>
         </div>
     </nav>
 
-    <div class="aod_left_panel_fly"></div>
+    <div class="touchClose_left_panel_fly"></div>
 
-    <div class="aod_flying_cart aod-fluying-cart-hidden" id="aod_flying_cart" style="background:#FFFFFF;">
-        <span class="aod_close_cart" style="float: right;cursor:pointer;">
+    <div class="garni_items_cart garni-items-cart-hidden" id="garni_items_cart" style="background:#FFFFFF;">
+        <span class="garni_close_cart" style="float: right;cursor:pointer;">
             <svg height="6.82666in"
                 style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
                 viewBox="0 0 6.82666 6.82666" width="6.82666in" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
@@ -93,15 +94,79 @@
             YOUR CART
         </h2>
         <hr>
-        <span class="aod-custom-cart-message"></span>
-        <div class="aod-product-row aod-empty-cart" style="color:#000000;">Your cart is empty!</div>
-        <a class="aod-shop-button-empty" href="#" style="color:#db251c;">Shop Now!</a>
+        <!--TO be displayed when cart is empty -->
+        <!-- <div class="garni-product-row aod-empty-cart" style="color:#000000;">Your cart is empty!</div>
+        <a class="aod-shop-button-empty" href="#" style="color:#db251c;">Shop Now!</a> -->
+        <!--  -->
+        <!-- Items added -->
+        <div class="garni-cart-container">
+            <div class="row garni-product-row">
+                <div class="col span_3 garni-product-image">
+                    <div class="garni-product-image_contain">
+                        <img src="imgs/product/pd1.png">
+                    </div>
+                </div>
+                <div class="garni-info-right-area">
+                    <div class="aod-product-name" style="color:#000000;">
+                        <a href="#" style="color:#000000;">Lal Mirch Powder</a>
+                        <br>
+                    </div>
+                    <div class="aod-quantity-container">
+                        <div class="aod-q-box">
+                            <button type="button" class="aod-quantity-input aod-sub-quantity"
+                                style="color:#000000;">-</button>
+                            <input type="text" id="aod-quantity-updater" name="updatequant" value="1"
+                                style="color:#000000;" disabled="disabled" line="1">
+                            <button type="button" class="aod-quantity-input aod-add-quantity"
+                                style="color:#000000;">+</button>
+                        </div>
+                        <input type="hidden" id="updates_32219513782405" value="1">
+                        <a class="aod-remove-from-cart" id="bag_product" href="javascript:;" line="1">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                    </div>
+                </div>
+                <span class="aod-product-price  money conversion-bear-money" style="color:#000000;">
+                    <span class="aod_currency"><i class="fas fa-rupee-sign"></i> 700</span>
+                </span>
+            </div>
+            <div class="row garni-product-row">
+                <div class="col span_3 garni-product-image">
+                    <div class="garni-product-image_contain">
+                        <img src="imgs/product/pd2.png">
+                    </div>
+                </div>
+                <div class="garni-info-right-area">
+                    <div class="aod-product-name" style="color:#000000;">
+                        <a href="#" style="color:#000000;">Dhania Powder</a>
+                        <br>
+                    </div>
+                    <div class="aod-quantity-container">
+                        <div class="aod-q-box">
+                            <button type="button" class="aod-quantity-input aod-sub-quantity"
+                                style="color:#000000;">-</button>
+                            <input type="text" id="aod-quantity-updater" name="updatequant" value="1"
+                                style="color:#000000;" disabled="disabled" line="1">
+                            <button type="button" class="aod-quantity-input aod-add-quantity"
+                                style="color:#000000;">+</button>
+                        </div>
+                        <input type="hidden" id="updates_32219513782405" value="1">
+                        <a class="aod-remove-from-cart" id="bag_product" ""="" href="javascript:;" line="1">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                    </div>
+                </div>
+                <span class="aod-product-price  money conversion-bear-money" style="color:#000000;">
+                    <span class="aod_currency"><i class="fas fa-rupee-sign"></i> 700</span>
+                </span>
+            </div>
+        </div>
         <div class="aod-cart-total-panel" style="background:#FFFFFF;">
             <form action="" method="post" novalidate="" class="aod_cart_form">
                 <div class="aod-total-price">
                     <span class="aod-total-text" style="color:#000000;">CART VALUE</span>
                     <span class="aod-total-amount money conversion-bear-money" style="color:#000000;">
-                        <span class="aod_currency">Rs.</span>0
+                        <span class="aod_currency"><i class="fas fa-rupee-sign"></i> 1400</span>
                     </span>
                 </div>
                 <input type="submit" name="checkout" class="aod-fast-checkout" value="Secure Checkout"
@@ -115,9 +180,10 @@
         const shopBtn = document.querySelector(".shop-icon");
         const cancelBtn = document.querySelector(".cancel-icon");
         const items = document.querySelector(".nav-items");
-        const slidein = document.querySelector(".aod_flying_cart");
-        const closeCart = document.querySelector(".aod_close_cart");
-        const touchClose = document.querySelector(".aod_left_panel_fly");
+        const slidein = document.querySelector(".garni_items_cart");
+        const closeCart = document.querySelector(".garni_close_cart");
+        const touchClose = document.querySelector(".touchClose_left_panel_fly");
+
         menuBtn.onclick = () => {
             items.classList.add("active");
             menuBtn.classList.add("hide");
@@ -178,300 +244,184 @@
 
     <section class="" id="products">
         <div class="container">
-            <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
-                <div class="col mb-4">
-                    <!-- Card -->
-                    <div class="card num-one">
-
-                        <!--Card image-->
-                        <div class="view overlay">
-                            <img class="card-img-top" src="imgs/product/pd1.png" alt="Card image cap">
-                            <a href="#!">
-                                <div class="mask rgba-white-slight"></div>
+            <div class="row row-cols-2 row-cols-sm-2 row-cols-md-2 row-cols-lg-4">
+                <div class="col-md-4 ">
+                    <figure class="card card-product-grid card-lg"> <a href="#" class="img-wrap" data-abc="true"
+                            data-toggle="modal" data-target="#product_view"><img src="imgs/product/pd1.png"></a>
+                        <figcaption class="info-wrap" data-toggle="modal" data-target="#product_view">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <a href="#0" class="title" data-abc="true">Lal Mirch Powder</a>
+                                </div>
+                            </div>
+                        </figcaption>
+                        <div class="bottom-wrap">
+                            <a href="#" class="btn btn-primary float-right" data-abc="true">
+                                <i class="fas fa-shopping-bag"></i>
                             </a>
+                            <div class="price-wrap">
+                                <span class="price">
+                                    <i class="fas fa-rupee-sign"></i> 700
+                                </span>
+                            </div>
                         </div>
-
-                        <!--Card content-->
-                        <div class="card-body">
-
-                            <!--Title-->
-                            <h4 class="card-title"
-                                style="text-align: right; color: #db251c; font-family: 'Montserrat'; font-weight: 800;">
-                                <i class="fas fa-rupee-sign" style="font-size: 1.3rem;"></i> 700
-                            </h4>
-                            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                            <button type="button" class="btn btn-md addToCartButton">ADD TO CART</button>
-
-                        </div>
-
-                    </div>
-                    <!-- Card -->
+                    </figure>
                 </div>
-                <div class="col mb-4">
-                    <!-- Card -->
-                    <div class="card">
-
-                        <!--Card image-->
-                        <div class="view overlay">
-                            <img class="card-img-top" src="imgs/product/pd2.png" alt="Card image cap">
-                            <a href="#!">
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
+                <div class="col-md-4">
+                    <figure class="card card-product-grid card-lg"> <a href="#" class="img-wrap" data-abc="true"
+                            data-toggle="modal" data-target="#product_view"><img src=" imgs/product/pd2.png"> </a>
+                        <figcaption class="info-wrap" data-toggle="modal" data-target="#product_view">
+                            <div class=" row">
+                                <div class="col-md-8"> <a href="#0" class="title" data-abc="true">Lal Mirch Powder</a>
+                                </div>
+                            </div>
+                        </figcaption>
+                        <div class="bottom-wrap"> <a href="#" class="btn btn-primary float-right" data-abc="true"> <i
+                                    class="fas fa-shopping-bag"></i> </a>
+                            <div class="price-wrap">
+                                <span class="price">
+                                    <i class="fas fa-rupee-sign"></i> 700
+                                </span>
+                            </div>
                         </div>
-
-                        <!--Card content-->
-                        <div class="card-body">
-
-                            <!--Title-->
-                            <h4 class="card-title"
-                                style="text-align: right; color: #db251c; font-family: 'Montserrat'; font-weight: 800;">
-                                <i class="fas fa-rupee-sign" style="font-size: 1.3rem;"></i> 700
-                            </h4>
-                            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                            <button type="button" class="btn btn-md">ADD TO CART</button>
-
-                        </div>
-
-                    </div>
-                    <!-- Card -->
+                    </figure>
                 </div>
-                <div class="col mb-4">
-                    <!-- Card -->
-                    <div class="card">
-
-                        <!--Card image-->
-                        <div class="view overlay">
-                            <img class="card-img-top" src="imgs/product/pd3.png" alt="Card image cap">
-                            <a href="#!">
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
+                <div class="col-md-4">
+                    <figure class="card card-product-grid card-lg"> <a href="#" class="img-wrap" data-abc="true"
+                            data-toggle="modal" data-target="#product_view"><img src=" imgs/product/pd3.png"> </a>
+                        <figcaption class="info-wrap" data-toggle="modal" data-target="#product_view">
+                            <div class=" row">
+                                <div class="col-md-8"> <a href="#0" class="title" data-abc="true">Lal Mirch Powder</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="rating text-right"> </div>
+                                </div>
+                            </div>
+                        </figcaption>
+                        <div class="bottom-wrap"> <a href="#" class="btn btn-primary float-right" data-abc="true"> <i
+                                    class="fas fa-shopping-bag"></i> </a>
+                            <div class="price-wrap">
+                                <span class="price">
+                                    <i class="fas fa-rupee-sign"></i> 700
+                                </span>
+                            </div>
                         </div>
-
-                        <!--Card content-->
-                        <div class="card-body">
-
-                            <!--Title-->
-                            <h4 class="card-title"
-                                style="text-align: right; color: #db251c; font-family: 'Montserrat'; font-weight: 800;">
-                                <i class="fas fa-rupee-sign" style="font-size: 1.3rem;"></i> 700
-                            </h4>
-                            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                            <button type="button" class="btn btn-md">ADD TO CART</button>
-
-                        </div>
-
-                    </div>
-                    <!-- Card -->
+                    </figure>
                 </div>
-                <div class="col mb-4">
-                    <!-- Card -->
-                    <div class="card">
-
-                        <!--Card image-->
-                        <div class="view overlay">
-                            <img class="card-img-top" src="imgs/product/pd3.png" alt="Card image cap">
-                            <a href="#!">
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
+                <div class="col-md-4">
+                    <figure class="card card-product-grid card-lg"> <a href="#" class="img-wrap" data-abc="true"
+                            data-toggle="modal" data-target="#product_view"><img src=" imgs/product/pd1.png"> </a>
+                        <figcaption class="info-wrap" data-toggle="modal" data-target="#product_view">
+                            <div class=" row">
+                                <div class="col-md-8"> <a href="#0" class="title" data-abc="true">Lal Mirch Powder</a>
+                                </div>
+                            </div>
+                        </figcaption>
+                        <div class="bottom-wrap"> <a href="#" class="btn btn-primary float-right" data-abc="true"> <i
+                                    class="fas fa-shopping-bag"></i> </a>
+                            <div class="price-wrap">
+                                <span class="price">
+                                    <i class="fas fa-rupee-sign"></i> 700
+                                </span>
+                            </div>
                         </div>
-
-                        <!--Card content-->
-                        <div class="card-body">
-
-                            <!--Title-->
-                            <h4 class="card-title"
-                                style="text-align: right; color: #db251c; font-family: 'Montserrat'; font-weight: 800;">
-                                <i class="fas fa-rupee-sign" style="font-size: 1.3rem;"></i> 700
-                            </h4>
-                            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                            <button type="button" class="btn btn-md">ADD TO CART</button>
-
-                        </div>
-
-                    </div>
-                    <!-- Card -->
+                    </figure>
                 </div>
-
-                <div class="col mb-4">
-                    <!-- Card -->
-                    <div class="card">
-
-                        <!--Card image-->
-                        <div class="view overlay">
-                            <img class="card-img-top" src="imgs/product/pd3.png" alt="Card image cap">
-                            <a href="#!">
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
+                <div class="col-md-4">
+                    <figure class="card card-product-grid card-lg"> <a href="#" class="img-wrap" data-abc="true"
+                            data-toggle="modal" data-target="#product_view"><img src=" imgs/product/pd2.png"> </a>
+                        <figcaption class="info-wrap" data-toggle="modal" data-target="#product_view">
+                            <div class=" row">
+                                <div class="col-md-8"> <a href="#0" class="title" data-abc="true">Lal Mirch Powder</a>
+                                </div>
+                            </div>
+                        </figcaption>
+                        <div class="bottom-wrap"> <a href="#" class="btn btn-primary float-right" data-abc="true"> <i
+                                    class="fas fa-shopping-bag"></i> </a>
+                            <div class="price-wrap">
+                                <span class="price">
+                                    <i class="fas fa-rupee-sign"></i> 700
+                                </span>
+                            </div>
                         </div>
-
-                        <!--Card content-->
-                        <div class="card-body">
-
-                            <!--Title-->
-                            <h4 class="card-title"
-                                style="text-align: right; color: #db251c; font-family: 'Montserrat'; font-weight: 800;">
-                                <i class="fas fa-rupee-sign" style="font-size: 1.3rem;"></i> 700
-                            </h4>
-                            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                            <button type="button" class="btn btn-md">ADD TO CART</button>
-
-                        </div>
-
-                    </div>
-                    <!-- Card -->
+                    </figure>
                 </div>
-
-
-                <div class="col mb-4">
-                    <!-- Card -->
-                    <div class="card">
-
-                        <!--Card image-->
-                        <div class="view overlay">
-                            <img class="card-img-top" src="imgs/product/pd3.png" alt="Card image cap">
-                            <a href="#!">
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
+                <div class="col-md-4">
+                    <figure class="card card-product-grid card-lg">
+                        <a href="#0" class="img-wrap" data-abc="true" data-toggle="modal" data-target="#product_view">
+                            <img src="imgs/product/pd3.png">
+                        </a>
+                        <figcaption class="info-wrap" data-toggle="modal" data-target="#product_view">
+                            <div class="row">
+                                <div class="col-md-8"> <a href="#0" class="title" data-abc="true">Lal Mirch Powder</a>
+                                </div>
+                            </div>
+                        </figcaption>
+                        <div class="bottom-wrap">
+                            <a href="#" class="btn btn-primary float-right" data-abc="true">
+                                <i class="fas fa-shopping-bag"></i> </a>
+                            <div class="price-wrap">
+                                <span class="price">
+                                    <i class="fas fa-rupee-sign"></i> 700
+                                </span>
+                            </div>
                         </div>
-
-                        <!--Card content-->
-                        <div class="card-body">
-
-                            <!--Title-->
-                            <h4 class="card-title"
-                                style="text-align: right; color: #db251c; font-family: 'Montserrat'; font-weight: 800;">
-                                <i class="fas fa-rupee-sign" style="font-size: 1.3rem;"></i> 700
-                            </h4>
-                            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                            <button type="button" class="btn btn-md">ADD TO CART</button>
-
-                        </div>
-
-                    </div>
-                    <!-- Card -->
+                    </figure>
                 </div>
+            </div>
+        </div>
 
-
-                <div class="col mb-4">
-                    <!-- Card -->
-                    <div class="card">
-
-                        <!--Card image-->
-                        <div class="view overlay">
-                            <img class="card-img-top" src="imgs/product/pd3.png" alt="Card image cap">
-                            <a href="#!">
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-
-                        <!--Card content-->
-                        <div class="card-body">
-
-                            <!--Title-->
-                            <h4 class="card-title"
-                                style="text-align: right; color: #db251c; font-family: 'Montserrat'; font-weight: 800;">
-                                <i class="fas fa-rupee-sign" style="font-size: 1.3rem;"></i> 700
-                            </h4>
-                            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                            <button type="button" class="btn btn-md">ADD TO CART</button>
-
-                        </div>
-
+        <div class="modal fade product_view" id="product_view">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Lal Mirch Powder</h3>
+                        <a href="#" data-dismiss="modal" class="class pull-right"><span class="fas fa-times"></span></a>
                     </div>
-                    <!-- Card -->
-                </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6 product_img">
+                                <img src="imgs/product/pd1.png" class="img-responsive">
+                            </div>
+                            <div class="col-md-6 product_content">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                    unknown printer took a galley of type and scrambled it to make a type specimen
+                                    book.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                <h3 class="cost"><span class="fas fa-rupee-sign"></span> 700
+                                </h3>
+                                <div class="proGroup d-flex flexAlignEnd">
+                                    <div class="proQuantity">
+                                        <div class="proQty">
+                                            <button type="button" class="proQtyAdjust proQtyButton proQtyMinus"
+                                                data-id="" data-qty="0">
+                                                <span class="txtFallback">−</span>
+                                            </button>
+                                            <input type="text" class="proQtyNum velaQtyText" value="1" min="1"
+                                                data-id="" aria-label="quantity" pattern="[0-9]*" name="quantity"
+                                                id="Quantity">
+                                            <button type="button" class="proQtyAdjust proQtyButton proQtyPlus"
+                                                data-id="" data-qty="11">
+                                                <span class="txtFallback">+</span>
+                                            </button>
+                                        </div>
 
 
-                <div class="col mb-4">
-                    <!-- Card -->
-                    <div class="card">
+                                    </div>
+                                    <div class="proButton">
+                                        <button type="submit" name="add" class="btn btnAddToCart">
+                                            <span>Add to Cart</span>
+                                        </button>
+                                    </div>
+                                </div>
 
-                        <!--Card image-->
-                        <div class="view overlay">
-                            <img class="card-img-top" src="imgs/product/pd3.png" alt="Card image cap">
-                            <a href="#!">
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
+                                <div class="proAttr quickviewAvailability instock">
+                                    <label>Availability:</label> In stock
+                                </div>
+                            </div>
                         </div>
-
-                        <!--Card content-->
-                        <div class="card-body">
-
-                            <!--Title-->
-                            <h4 class="card-title"
-                                style="text-align: right; color: #db251c; font-family: 'Montserrat'; font-weight: 800;">
-                                <i class="fas fa-rupee-sign" style="font-size: 1.3rem;"></i> 700
-                            </h4>
-                            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                            <button type="button" class="btn btn-md">ADD TO CART</button>
-
-                        </div>
-
                     </div>
-                    <!-- Card -->
                 </div>
-
-
-                <div class="col mb-4">
-                    <!-- Card -->
-                    <div class="card">
-
-                        <!--Card image-->
-                        <div class="view overlay">
-                            <img class="card-img-top" src="imgs/product/pd3.png" alt="Card image cap">
-                            <a href="#!">
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-
-                        <!--Card content-->
-                        <div class="card-body">
-
-                            <!--Title-->
-                            <h4 class="card-title"
-                                style="text-align: right; color: #db251c; font-family: 'Montserrat'; font-weight: 800;">
-                                <i class="fas fa-rupee-sign" style="font-size: 1.3rem;"></i> 700
-                            </h4>
-                            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                            <button type="button" class="btn btn-md">ADD TO CART</button>
-
-                        </div>
-
-                    </div>
-                    <!-- Card -->
-                </div>
-
-
-                <div class="col mb-4">
-                    <!-- Card -->
-                    <div class="card">
-
-                        <!--Card image-->
-                        <div class="view overlay">
-                            <img class="card-img-top" src="imgs/product/pd3.png" alt="Card image cap">
-                            <a href="#!">
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-
-                        <!--Card content-->
-                        <div class="card-body">
-
-                            <!--Title-->
-                            <h4 class="card-title"
-                                style="text-align: right; color: #db251c; font-family: 'Montserrat'; font-weight: 800;">
-                                <i class="fas fa-rupee-sign" style="font-size: 1.3rem;"></i> 700
-                            </h4>
-                            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                            <button type="button" class="btn btn-md">ADD TO CART</button>
-
-                        </div>
-
-                    </div>
-                    <!-- Card -->
-                </div>
-
-
             </div>
         </div>
     </section>
