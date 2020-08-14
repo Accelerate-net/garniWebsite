@@ -24,8 +24,8 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" href="css/slick.css">
-  <link rel="stylesheet" href="css/slicknav.css">
+  <!-- <link rel="stylesheet" href="css/slick.css"> -->
+  <!-- <link rel="stylesheet" href="css/slicknav.css"> -->
   <link rel="stylesheet" href="css/style.css">
 
   <link
@@ -37,85 +37,184 @@
 
 <body>
   <!-- Navbar starts -->
-  <!-- <nav class="navbar navbar-expand-lg navbar-dark animate__animated animate__fadeInDown animate__delay-1s"
-    style="z-index: 1000; background-color: transparent;">
-    <a class="navbar-brand " href="#"><img src="imgs/logo/logo11.png" alt=""></a>
-    <button class="navbar-toggler mr-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#shop">HOME</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#shop">PRODUCTS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#blog">ABOUT</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#footer">CONTACT</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><i class="fas fa-shopping-bag"></i></a>
-        </li>
-      </ul>
+  <nav>
+    <div class="menu-icon">
+      <span class="fas fa-bars"></span>
     </div>
-  </nav> -->
-  <header>
-    <div id="logo"><a href=""><img src="imgs/logo/logo11.png" alt="Homepage"></a></div>
-
-    <div id="cd-hamburger-menu"><a class="cd-img-replace" href="#0"></a></div>
-    <div id="cd-cart-trigger"><a class="cd-img-replace" href="#0"></a></div>
-  </header>
-
-  <nav id="main-nav">
-    <div class="nav-links">
-            <ul>
-                <li><a href="index.html">SHOP NOW</a></li>
-                <li><a href="world-of-garni.html">HOUSE OF GARNI</a></li>
-                <li><a href="#">SHOW WALL</a></li>
-                <li><a href="#">CAREERS</a></li>
-                <li><a href="#footer">CONTACT</a></li>
-            </ul>
+    <div class="logo">
+      <img src="imgs/logo/logo11.png" alt="">
+    </div>
+    <div class="nav-items">
+      <li><a href="#">SHOP NOW</a></li>
+      <li><a href="#">HOUSE OF GARNI</a></li>
+      <li><a href="#">SHOW WALL</a></li>
+      <li><a href="#">CAREERS</a></li>
+      <li><a href="#footer">CONTACT</a></li>
+    </div>
+    <div class="shop-icon">
+      <span class="fas fa-shopping-cart"></span>
+      <span class="itemBadge" id="itemCount"> 2 </span>
+    </div>
+    <div class="cancel-icon">
+      <span class="fas fa-times"></span>
     </div>
   </nav>
 
-  <div id="cd-shadow-layer"></div>
+  <div class="touchClose_left_panel_fly"></div>
 
-  <div id="cd-cart">
-    <a href="#0" class="cd-cart-close">Close<i class="fas fa-times"></i></a>
-    <h2>Cart</h2>
-    <ul class="cd-cart-items">
-      <li>
-        <span class="cd-qty">1x</span> Product Name
-        <div class="cd-price">$9.99</div>
-        <a href="#0" class="cd-item-remove cd-img-replace">Remove</a>
-      </li>
-
-      <li>
-        <span class="cd-qty">2x</span> Product Name
-        <div class="cd-price">$19.98</div>
-        <a href="#0" class="cd-item-remove cd-img-replace">Remove</a>
-      </li>
-
-      <li>
-        <span class="cd-qty">1x</span> Product Name
-        <div class="cd-price">$9.99</div>
-        <a href="#0" class="cd-item-remove cd-img-replace">Remove</a>
-      </li>
-    </ul> <!-- cd-cart-items -->
-
-    <div class="cd-cart-total">
-      <p>Total <span>$39.96</span></p>
-    </div> <!-- cd-cart-total -->
-    <div class="ch-btn">
-      <a href="#0" class="checkout-btn">Checkout</a>
+  <div class="garni_items_cart garni-items-cart-hidden" id="garni_items_cart" style="background:#FFFFFF;">
+    <span class="garni_close_cart" style="float: right;cursor:pointer;">
+      <svg height="6.82666in"
+        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+        viewBox="0 0 6.82666 6.82666" width="6.82666in" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs></defs>
+        <g id="Layer_x0020_1">
+          <path class="fil0"
+            d="M5.91083 1.2175c0.0833031,-0.0833031 0.0833031,-0.218366 0,-0.301669 -0.0833031,-0.0833031 -0.218366,-0.0833031 -0.301669,0l-4.69334 4.69333c-0.0833031,0.0833031 -0.0833031,0.218366 0,0.301669 0.0833031,0.0833031 0.218366,0.0833031 0.301669,0l4.69334 -4.69333z">
+          </path>
+          <path class="fil0"
+            d="M1.2175 0.915827c-0.0833031,-0.0833031 -0.218366,-0.0833031 -0.301669,0 -0.0833031,0.0833031 -0.0833031,0.218366 0,0.301669l4.69334 4.69333c0.0833031,0.0833031 0.218366,0.0833031 0.301669,0 0.0833031,-0.0833031 0.0833031,-0.218366 0,-0.301669l-4.69334 -4.69333z">
+          </path>
+        </g>
+      </svg>
+    </span>
+    <h2 class="aod-main-heading" style="color:#000000;">
+      <span style="position:relative;">
+        <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32"
+          width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g transform="translate(0 288)">
+            <path
+              d="M30-287.999h-4c-0.967,0-1.795,0.691-1.967,1.643l-0.43,2.357H2c-0.693,0-1.337,0.359-1.701,0.949   c-0.364,0.59-0.397,1.324-0.088,1.945l6,12C6.55-268.427,7.242-268,8-268h12.694l-0.363,2H10c-1.104,0-2,0.896-2,2   c0,1.105,0.896,2,2,2h12c0.967,0,1.795-0.691,1.967-1.643l3.703-20.358H30c1.104,0,2-0.895,2-2c0-1.105-0.896-2-2-2V-287.999z    M9.237-271.999l-4-8h17.641l-1.455,8H9.237z">
+            </path>
+            <path
+              d="M12-259.999c-1.104,0-2,0.896-2,2c0,1.105,0.896,2,2,2s2-0.895,2-2C14-259.104,13.104-259.999,12-259.999z">
+            </path>
+            <path
+              d="M20-259.999c-1.104,0-2,0.896-2,2c0,1.105,0.896,2,2,2c1.105,0,2-0.895,2-2C22-259.104,21.105-259.999,20-259.999z">
+            </path>
+          </g>
+        </svg>
+      </span>
+      YOUR CART
+    </h2>
+    <hr>
+    <!--TO be displayed when cart is empty -->
+    <!-- <div class="garni-product-row aod-empty-cart" style="color:#000000;">Your cart is empty!</div>
+        <a class="aod-shop-button-empty" href="#" style="color:#db251c;">Shop Now!</a> -->
+    <!--  -->
+    <!-- Items added -->
+    <div class="garni-cart-container">
+      <div class="row garni-product-row">
+        <div class="col span_3 garni-product-image">
+          <div class="garni-product-image_contain">
+            <img src="imgs/product/pd1.png">
+          </div>
+        </div>
+        <div class="garni-info-right-area">
+          <div class="aod-product-name" style="color:#000000;">
+            <a href="#" style="color:#000000;">Lal Mirch Powder</a>
+            <br>
+          </div>
+          <div class="aod-quantity-container">
+            <div class="aod-q-box">
+              <button type="button" class="aod-quantity-input aod-sub-quantity" style="color:#000000;">-</button>
+              <input type="text" id="aod-quantity-updater" name="updatequant" value="1" style="color:#000000;"
+                disabled="disabled" line="1">
+              <button type="button" class="aod-quantity-input aod-add-quantity" style="color:#000000;">+</button>
+            </div>
+            <input type="hidden" id="updates_32219513782405" value="1">
+            <a class="aod-remove-from-cart" id="bag_product" href="javascript:;" line="1">
+              <i class="fas fa-trash"></i>
+            </a>
+          </div>
+        </div>
+        <span class="aod-product-price  money conversion-bear-money" style="color:#000000;">
+          <span class="aod_currency"><i class="fas fa-rupee-sign"></i> 700</span>
+        </span>
+      </div>
+      <div class="row garni-product-row">
+        <div class="col span_3 garni-product-image">
+          <div class="garni-product-image_contain">
+            <img src="imgs/product/pd2.png">
+          </div>
+        </div>
+        <div class="garni-info-right-area">
+          <div class="aod-product-name" style="color:#000000;">
+            <a href="#" style="color:#000000;">Dhania Powder</a>
+            <br>
+          </div>
+          <div class="aod-quantity-container">
+            <div class="aod-q-box">
+              <button type="button" class="aod-quantity-input aod-sub-quantity" style="color:#000000;">-</button>
+              <input type="text" id="aod-quantity-updater" name="updatequant" value="1" style="color:#000000;"
+                disabled="disabled" line="1">
+              <button type="button" class="aod-quantity-input aod-add-quantity" style="color:#000000;">+</button>
+            </div>
+            <input type="hidden" id="updates_32219513782405" value="1">
+            <a class="aod-remove-from-cart" id="bag_product" ""="" href="javascript:;" line="1">
+              <i class="fas fa-trash"></i>
+            </a>
+          </div>
+        </div>
+        <span class="aod-product-price  money conversion-bear-money" style="color:#000000;">
+          <span class="aod_currency"><i class="fas fa-rupee-sign"></i> 700</span>
+        </span>
+      </div>
     </div>
-  </div> <!-- cd-cart -->
+    <div class="aod-cart-total-panel" style="background:#FFFFFF;">
+      <form action="" method="post" novalidate="" class="aod_cart_form">
+        <div class="aod-total-price">
+          <span class="aod-total-text" style="color:#000000;">CART VALUE</span>
+          <span class="aod-total-amount money conversion-bear-money" style="color:#000000;">
+            <span class="aod_currency"><i class="fas fa-rupee-sign"></i> 1400</span>
+          </span>
+        </div>
+        <input type="submit" name="checkout" class="aod-fast-checkout" value="Secure Checkout"
+          style="background: #db251c;color:#FFFFFF; border:1px solid #db251c;">
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const menuBtn = document.querySelector(".menu-icon span");
+    const shopBtn = document.querySelector(".shop-icon");
+    const cancelBtn = document.querySelector(".cancel-icon");
+    const items = document.querySelector(".nav-items");
+    const slidein = document.querySelector(".garni_items_cart");
+    const closeCart = document.querySelector(".garni_close_cart");
+    const touchClose = document.querySelector(".touchClose_left_panel_fly");
+
+    menuBtn.onclick = () => {
+      items.classList.add("active");
+      menuBtn.classList.add("hide");
+      shopBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+    }
+    cancelBtn.onclick = () => {
+      items.classList.remove("active");
+      menuBtn.classList.remove("hide");
+      shopBtn.classList.remove("hide");
+      cancelBtn.classList.remove("show");
+      cancelBtn.style.color = "#ff3d00";
+    }
+    shopBtn.onclick = () => {
+      touchClose.classList.add("overlay_active_aod");
+      slidein.classList.add("aod-fluying-cart-visible");
+    }
+
+    closeCart.onclick = () => {
+      touchClose.classList.remove("overlay_active_aod");
+      slidein.classList.remove("aod-fluying-cart-visible");
+    }
+
+    touchClose.onclick = () => {
+      touchClose.classList.remove("overlay_active_aod");
+      slidein.classList.remove("aod-fluying-cart-visible");
+    }
+  </script>
+
   <!-- Navbar ends -->
 
   <!-- Landing Page starts -->
@@ -143,7 +242,8 @@
   <section class="about" id="about">
     <div class="container">
       <div class="profile-img" data-aos="fade-right" data-aos-delay="300">
-        <img src="imgs/chef-with-products.jpeg" alt="Akshay" style="border-top-right-radius: 20%; border-bottom-left-radius: 20%;">
+        <img src="imgs/chef-with-products.jpeg" alt="Akshay"
+          style="border-top-right-radius: 20%; border-bottom-left-radius: 20%;">
       </div>
       <div class="about-details" data-aos="fade-left" data-aos-delay="600">
         <div class="about-heading">
@@ -388,7 +488,7 @@
   <script src="js/jquery.scrollUp.min.js" type="f218169ba79340ff49c0d228-text/javascript"></script> -->
   <!-- <script src="js/wow.min.js" type="f218169ba79340ff49c0d228-text/javascript"></script> -->
   <!-- <script src="js/nice-select.min.js" type="f218169ba79340ff49c0d228-text/javascript"></script> -->
-  <script src="js/jquery.slicknav.min.js" type="f218169ba79340ff49c0d228-text/javascript"></script>
+  <!-- <script src="js/jquery.slicknav.min.js" type="f218169ba79340ff49c0d228-text/javascript"></script> -->
   <!-- <script src="js/jquery.magnific-popup.min.js" type="f218169ba79340ff49c0d228-text/javascript"></script>
   <script src="js/plugins.js" type="f218169ba79340ff49c0d228-text/javascript"></script>
   <script src="js/gijgo.min.js" type="f218169ba79340ff49c0d228-text/javascript"></script>
